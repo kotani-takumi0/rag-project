@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+
+# 仮想環境・環境変数
+.venv/
+venv/
+.env
+*.env
+
+# Jupyter / IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# プロジェクト成果物・データ
+data/
+index/
+outputs/
+logs/
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# サンプルだけは追跡したいとき
+# !data/sample/**
