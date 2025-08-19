@@ -17,15 +17,27 @@
 
 ## ディレクトリ構成
 ```
-.
-├── data/                       # 入力データ（例: policy_chunks.jsonl など）
-├── scripts/
-│   ├── search_bm25.py          # BM25 検索
-│   ├── search_embed_chunks.py  # Embedding + FAISS 検索
-│   └── evaluate.py             # 検索性能評価
-├── notebooks/                  # 実験・分析用ノートブック
-├── requirements.txt            # 依存パッケージ
-└── README.md                   # 本ファイル
+├── README.md           # このファイル
+├── requirements.txt    # プロジェクトの依存ライブラリ一覧
+│
+├── bm25/
+│   └── pipeline.py     # BM25のパイプラインスクリプト
+│
+├── core/
+│   └── retriever.py    # 検索モデルのコアロジック
+│
+├── data/
+│   ├── processed/      # 前処理済みのデータ
+│   │   ├── kb_light_clean.jsonl
+│   │   ├── kb_light_clean.with_id.jsonl
+│   │   └── policy_chunks.jsonl
+│   └── raw/            # 加工前の生データ
+│
+├── embed/              # 文章の埋め込みベクトルを保存するディレクトリ
+│
+├── index/              # 検索インデックスを保存するディレクトリ
+│
+└── scripts/            # データの前処理やモデルの学習などを実行するスクリプト
 ```
 
 ## セットアップ
